@@ -21,7 +21,7 @@ Route::controller('!','HomeController');
 
 Route::group(array('prefix'=>'api'),function(){
 	Route::controller('users','UsersApiController');
-	Route::controller('categories','CategoryAllApiController');
+	Route::controller('categories','CategoriesApiController');
 	Route::resource('category','CategoryApiController');
 	Route::resource('user','UserApiController');
 	Route::resource('profile','ProfileApiController');

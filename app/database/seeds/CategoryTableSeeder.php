@@ -4,7 +4,7 @@ class CategoryTableSeeder extends Seeder{
 
 	public function run(){
 
-		DB::table('categories')->delete();
+		DB::table('category')->delete();
 
 		$languages = array(
 				'PHP',

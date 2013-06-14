@@ -1,7 +1,14 @@
 
 <script type = "text/template" id = "category" spa-tpl-id = "category">
 
+<%
+        var count = 0;
+        _.each(data,function(category){
+            count++;
+        });
 
+
+    %>
 	
 
 
@@ -60,19 +67,63 @@
 
             <div id = "collapse-table-search-dark" class = "collapse in" style = "padding:10px">
 
-            	<%
-
-            	_.each(data, function(category){
-
-            		console.log(category.name);
-            		console.log(category.description);
-            		console.log(category.created_at);
-
-            	});
-
-            	 %>
+                    <!-- ########## SEARCH BOX ########### -->
+                <span class="pull-left keywords">
+                    <form action="javascript:void(0)" class="form-inline">
+                        <input name="q" class="table-form" type="text"  placeholder="Search Username" >
+                        <button type="submit" class="btn btn-primary"> <i class="icon-search icon-white"></i></button>
+                    </form>
+                </span>
 
 
+
+
+
+                <span class="pull-right">
+                    <% if(page != 0){ %>
+                        <% var page_ = page-1; %>
+                        <a class="btn btn-danger" href="#users/all/<%=(page_)%>" ><i class="icon-chevron-left"></i></a>
+                    <% }%>
+                    <% page++; %>
+                    <a href="#users/all/<%=(page)%>" class="btn btn-danger"><i class="icon-chevron-right"></i></a>
+                </span>
+
+                <% if(count == 0) { %>
+                            <div class="alert alert-warning">
+                              <strong><i class='icon-user'></i> Sorry!</strong> There are no users on the database at the moment.
+                            </div>
+                
+                    <% }else { %>
+                        <table class="responsive table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Date created</th>
+                                    <th>&nbsp;</th>                                          
+                                </tr>
+                            </thead>   
+                            <tbody  spa-id='users-table'>
+                                <%
+                                    _.each(data, function(category){
+                                        %>
+                                        <tr>
+                                            <td class="center"><a href="#"><%=category.name%></a></td>
+                                            <td class="center"><%=category.description%></td>
+                                            <td class="center"><%=category.created_at%></td>
+                                            <td class="center"><a href='#' class="btn btn-info"><i class="icon-user"></a></i></td>
+                                        </tr>
+                                        <%
+                                    });
+
+
+                                %> 
+                            </tbody>
+                        </table>
+                     <% } %>
+
+
+            	
 
             	this is where you put the category table
 

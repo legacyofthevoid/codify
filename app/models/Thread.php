@@ -1,6 +1,6 @@
 <?php
 
-class Threads extends Eloquent{
+class Thread extends Eloquent{
 
 	public function category(){
 

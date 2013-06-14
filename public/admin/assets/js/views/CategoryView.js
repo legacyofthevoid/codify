@@ -16,7 +16,7 @@ CategoryView = Backbone.View.extend({
 	render: function(){
 
 		
-		this.data = new CategoryAll;
+		this.data = new Categories;
 
 		var that = this;
 		this.data.fetch({data:{skip:this.options.page*10, take:10}, success:function(){

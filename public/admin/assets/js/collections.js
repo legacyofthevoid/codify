@@ -4,7 +4,7 @@ var Users  = Backbone.Model.extend({
 });
 
 
-var CategoryAll = Backbone.Model.extend({
+var Categories = Backbone.Model.extend({
 
 	url: "api/categories/all",
 	model: Category, 
