@@ -27,4 +27,15 @@ app_router.on('route:categoryView',function(page){
 
 });
 
+app_router.on('route:threadView',function(page){
+
+	if(page === null)
+		page = 0;
+
+	$("[spa-id=main-container]").fadeOut(500);
+	var all_threads_view = new AllThreadsView( {el: $("[spa-id=main-container]"), page: page});
+
+
+})
+
  Backbone.history.start();

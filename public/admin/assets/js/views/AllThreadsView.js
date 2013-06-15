@@ -1,0 +1,6 @@
+AllThreadsView = Backbone.View.extend({
+
+	
+
+
+})

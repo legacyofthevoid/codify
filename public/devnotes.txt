@@ -49,7 +49,7 @@
 	- fixed initial API of user data
 	- fixed some bugs
 
-6/2/2013 8:45pm Aaron: aaronespallardo
+6/2/2013 8:45pm legacyofthevoid
 	- added database for category and thread
 	- finished category retrieval , output is in the console
 	- finished category adding
@@ -67,7 +67,7 @@
 	- added user viewing (still in coding phase)
 	- bug found - see bugs sections
 
-6/4/2013 8:58am Aaron: aaronespallardo
+6/4/2013 8:58am legacyofthevoid
 	- added category-thread relations laravel and backbone (not yet tested)
 
 6/5/2013 4:33 AM Printf:
@@ -126,4 +126,7 @@
 	- backbone should aslo be able to manipulate meta title, description and facebook's OG. (Open Graph)
 	- this is for seo purposes
 	- we will not implement the Controller Routing for admin backbone
-	
+
+6/14/2013	legacyofthevoid
+	-fix naming convention for category
+	-added table view for categories

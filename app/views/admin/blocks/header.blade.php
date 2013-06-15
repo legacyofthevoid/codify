@@ -83,6 +83,7 @@
 	    @include('admin.tpls.alerts')
 	    @include('admin.tpls.category')
 	    @include('admin.tpls.current_user')
+	    @include('admin.tpls.threads')
 	    
 
 	    <!-- end: JS -->
