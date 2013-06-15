@@ -6,8 +6,8 @@ var AppRouter = Backbone.Router.extend({
 			"users/roles"					: 	"clearAll",
 			"user/:id"						: 	"userView",
 			"activities/categories(/:page)" : "categoryView",
-			"activities/threads/all(/:page)"	: 	"threadView",
-			"activities/threads/:category(/:page)" 	: 	"clearAll"
+			"activities/threads(/:page)(/:category)"	: 	"threadView"
+			//"activities/threads/:category(/:page)" 	: 	"threadView"
 		}
 	});
 

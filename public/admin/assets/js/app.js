@@ -27,15 +27,22 @@ app_router.on('route:categoryView',function(page){
 
 });
 
-app_router.on('route:threadView',function(page){
+app_router.on('route:threadView',function(page,category){
+
+	console.log(page + " --- " + category);
 
 	if(page === null)
-		page = 0;
+		page = 1000;
+	if(category === null)
+		category === 1;
+	
 
 	$("[spa-id=main-container]").fadeOut(500);
-	var all_threads_view = new AllThreadsView( {el: $("[spa-id=main-container]"), page: page});
+	var all_threads_view = new AllThreadsView( {el: $("[spa-id=main-container]"), page:page, category:category });
 
 
 })
+
+
 
  Backbone.history.start();
